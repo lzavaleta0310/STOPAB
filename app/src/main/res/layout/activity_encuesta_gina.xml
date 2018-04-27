@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearHeaderProgress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/relative_001"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:id="@+id/linear_001"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/margin_left_layouts"
+                android:layout_marginTop="@dimen/margin_top_layouts"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/text_encuesta_001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:text="Pregunta 1"/>
+
+                <mx.com.lania.controlasmaapp.view.TextViewEx
+                    android:id="@+id/pregunta_gina_001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:layout_marginRight="80dp"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_below="@+id/text_encuesta_001" />
+
+                <Switch
+                    android:id="@+id/switch_pregunta_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_right_layouts"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/linear_002"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/margin_left_layouts"
+                android:layout_marginTop="@dimen/margin_top_layouts"
+                android:layout_below="@+id/linear_001"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_encuesta_002"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:text="Pregunta 2"/>
+
+                <mx.com.lania.controlasmaapp.view.TextViewEx
+                    android:id="@+id/pregunta_gina_002"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:textSize="18sp"
+                    android:layout_marginRight="80dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_below="@+id/text_encuesta_002" />
+
+                <Switch
+                    android:id="@+id/switch_pregunta_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_right_layouts"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/linear_003"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/margin_left_layouts"
+                android:layout_marginTop="@dimen/margin_top_layouts"
+                android:layout_below="@+id/linear_002"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_encuesta_003"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:text="Pregunta 3"/>
+
+                <mx.com.lania.controlasmaapp.view.TextViewEx
+                    android:id="@+id/pregunta_gina_003"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:textSize="18sp"
+                    android:layout_marginRight="80dp"
+                    android:layout_below="@+id/text_encuesta_003" />
+
+                <Switch
+                    android:id="@+id/switch_pregunta_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_right_layouts"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/linear_004"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/margin_left_layouts"
+                android:layout_marginTop="@dimen/margin_top_layouts"
+                android:layout_below="@+id/linear_003"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_encuesta_004"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:text="Pregunta 4"/>
+
+                <mx.com.lania.controlasmaapp.view.TextViewEx
+                    android:id="@+id/pregunta_gina_004"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:textSize="18sp"
+                    android:layout_marginRight="80dp"
+                    android:layout_below="@+id/text_encuesta_004" />
+
+                <Switch
+                    android:id="@+id/switch_pregunta_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_right_layouts"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/linear_005"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/margin_left_layouts"
+                android:layout_marginTop="@dimen/margin_top_layouts"
+                android:layout_below="@+id/linear_004"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_encuesta_005"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:text="Pregunta 5"/>
+
+                <mx.com.lania.controlasmaapp.view.TextViewEx
+                    android:id="@+id/pregunta_gina_005"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_layouts"
+                    android:textSize="18sp"
+                    android:layout_marginRight="80dp"
+                    android:layout_below="@+id/text_encuesta_005" />
+
+                <Switch
+                    android:id="@+id/switch_pregunta_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_right_layouts"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_below="@+id/linear_005"
+                android:id="@+id/button_enviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_top_layouts"
+                android:text="Enviar"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

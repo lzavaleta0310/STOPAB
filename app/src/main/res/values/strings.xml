@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Control Asma App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="string_si">Si</string>
+    <string name="string_no">No</string>
+
+    <!-- Mensajes de alertas -->
+    <string name="envio_no_valido_gina">La encuesta GINA no puede ser enviada el día de hoy.</string>
+    <string name="envio_no_valido_act">La encuesta ATC no puede ser enviada el día de hoy.</string>
+    <string name="opciones_faltantes_act">Debes responder todas las preguntas para poder enviar.</string>
+    <string name="envio_ok">La encuesta Gina se ha enviado.</string>
+    <string name="envio_ok_act">La encuesta Act se ha enviado.</string>
+    <string name="envio_ok_registro_diario">Se ha enviado el registro diario.</string>
+
+    <!-- texto botones alertas -->
+    <string name="button_aceptar">Aceptar</string>
+    <string name="button_cancelar">Cancelar</string>
+
+    <!-- Arreglos -->
+    <array name="opciones_act">
+        <item>Siempre</item>
+        <item>Casi siempre</item>
+        <item>A veces</item>
+        <item>Pocas veces</item>
+        <item>Nunca</item>
+    </array>
+
+    <array name="sintoma_registro_diario">
+        <item>Disnea</item>
+        <item>Tos</item>
+        <item>Sibilancias</item>
+        <item>Opresión de pecho</item>
+    </array>
+
+    <!-- Encuestas -->
+    <string name="gina_uno">Despertar de noche por asma</string>
+    <string name="gina_dos">Medicamentos de emergencia por crisis</string>
+    <string name="gina_tres">Consulta de emergencia</string>
+    <string name="gina_cuatro">Flujo máximo menor a 44</string>
+    <string name="gina_cinco">Limitación de actividades diarias por asma</string>
+
+    <string name="act_uno">En las últimas 4 semanas, ¿cuánto tiempo le ha impedido su asma hacer todo lo que quería en el trabajo, en la escuela o en la casa?</string>
+    <string name="act_dos">Durante las últimas 4 semanas, ¿con qué frecuencia le ha faltado el aire?</string>
+    <string name="act_tres">Durante las últimas 4 semanas, ¿con qué frecuencia sus síntomas del asma (respiración sibilante o un silbido en el pecho, tos, falta de aire, opresión en el pecho o dolor) lo/la despertaron durante la noche o más temprano de lo usual en la mañana?</string>
+    <string name="act_cuatro">Durante las últimas 4 semanas, ¿con qué frecuencia ha usado su inhalador de rescate o medicamento en nebulizador (como albuterol)?</string>
+    <string name="act_cinco">¿Cómo evaluaría el control de su asma durante las últimas 4 semanas?</string>
+
+    <string name="title_activity_desktop">Control Asma App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
