@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_poco"
+        android:orderInCategory="100"
+        android:title="Poco"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_moderado"
+        android:orderInCategory="100"
+        android:title="Moderado"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_mucho"
+        android:orderInCategory="100"
+        android:title="Mucho"
+        app:showAsAction="never" />
+</menu>

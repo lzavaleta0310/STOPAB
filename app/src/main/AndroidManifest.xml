@@ -33,7 +33,9 @@
             android:name=".view.DesktopActivity"
             android:label="@string/title_activity_desktop"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".view.EncuestaGinaActivity"></activity>
+        <activity android:name=".view.EncuestaGinaActivity" />
+        <activity android:name=".view.EncuestaACTActivity" />
+        <activity android:name=".view.RegistroDiarioActivity" />
     </application>
 
 </manifest>

@@ -17,8 +17,8 @@ import mx.com.lania.controlasmaapp.view.HomeViewAdapter;
 
 public class HomeFragment extends Fragment {
 
-    RecyclerView recyclerView;
-    ArrayList arrayList;
+    private RecyclerView recyclerView;
+    private ArrayList arrayList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

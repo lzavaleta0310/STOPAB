@@ -44,6 +44,12 @@ public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.ViewHo
                     if (mTextView.getText().toString().equals("Registrar \nGINA")) {
                         Intent intent = new Intent(HomeViewAdapter.context, EncuestaGinaActivity.class);
                         HomeViewAdapter.context.startActivity(intent);
+                    } else if(mTextView.getText().toString().equalsIgnoreCase("Registrar \nACT")){
+                        Intent intent = new Intent(HomeViewAdapter.context, EncuestaACTActivity.class);
+                        HomeViewAdapter.context.startActivity(intent);
+                    } else if(mTextView.getText().toString().equalsIgnoreCase("Capturar \nsíntomas")){
+                        Intent intent = new Intent(HomeViewAdapter.context, RegistroDiarioActivity.class);
+                        HomeViewAdapter.context.startActivity(intent);
                     }
                     Toast.makeText(v.getContext(), mTextView.getText().toString(), Toast.LENGTH_SHORT).show();
                 }

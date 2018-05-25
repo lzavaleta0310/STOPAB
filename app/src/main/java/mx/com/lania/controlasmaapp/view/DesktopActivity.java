@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import mx.com.lania.controlasmaapp.R;
 import mx.com.lania.controlasmaapp.view.fragments.HomeFragment;
+import mx.com.lania.controlasmaapp.view.fragments.InformeCrisisFragment;
 
 public class DesktopActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -91,11 +92,11 @@ public class DesktopActivity extends AppCompatActivity implements NavigationView
                 fragmentTransaction.commit();
                 break;
             case 1:
-                /*fragmentManager = getSupportFragmentManager();
+                fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
-                EncuestaGinaFragment encuestaGinaFragment = new EncuestaGinaFragment();
-                fragmentTransaction.replace(R.id.fragment, encuestaGinaFragment);
-                fragmentTransaction.commit();*/
+                InformeCrisisFragment informeCrisisFragment = new InformeCrisisFragment();
+                fragmentTransaction.replace(R.id.fragment, informeCrisisFragment);
+                fragmentTransaction.commit();
                 break;
             case 2:
                 /*fragmentManager = getSupportFragmentManager();

@@ -28,26 +28,36 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
-        LoginViewModel model = new LoginViewModel("", "");
-        binding.setModel(model);
+        //LoginViewModel model = new LoginViewModel("", "");
+        //binding.setModel(model);
 
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                call = new CallLogin(LoginActivity.this, binding.inputUsuario.getText().toString(), binding.inputContrasena.getText().toString(), new CallLogin.Delegate() {
-                    @Override
-                    public void onSuccess(Login login) {
-                        Toast.makeText(getBaseContext(), login.mensaje.mensaje, Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(LoginActivity.this, DesktopActivity.class);
-                        startActivity(i);
+                if (binding.inputUsuario.getText().toString().isEmpty()) {
+                    binding.textInputCorreo.setError("El correo electrónico es obligatorio");
+                } else {
+                    if (binding.inputContrasena.getText().toString().isEmpty()){
+                        binding.textInputContrasena.setError("La contraseña es obligatoria");
+                    } else {
+                        call = new CallLogin(LoginActivity.this, binding.inputUsuario.getText().toString(), binding.inputContrasena.getText().toString(), new CallLogin.Delegate() {
+                            @Override
+                            public void onSuccess(Login login) {
+                                if (login.mensaje.error){
+                                    Toast.makeText(getBaseContext(), login.mensaje.mensaje, Toast.LENGTH_LONG).show();
+                                } else {
+                                    Intent i = new Intent(LoginActivity.this, DesktopActivity.class);
+                                    startActivity(i);
+                                }
+                            }
+                            @Override
+                            public void onFailure(Object t) {
+                                Log.e(LOGTAG, "onFailure :: " + t.toString());
+                            }
+                        });
+                        call.execute();
                     }
-
-                    @Override
-                    public void onFailure(Object t) {
-                        Log.e(LOGTAG, "onFailure :: " + t.toString());
-                    }
-                });
-                call.execute();
+                }
             }
         });
 
@@ -59,6 +69,18 @@ public class LoginActivity extends AppCompatActivity {
                     binding.textInputCorreo.setError("");
                 } else {
                     binding.textInputCorreo.setError("Correo no valido");
+                }
+            }
+        });
+
+        binding.inputContrasena.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                String passwordPattern = "[a-zA-Z0-9._-].{3,20}";
+                if (binding.inputContrasena.getText().toString().matches(passwordPattern) || binding.inputContrasena.getText().toString().length() == 0){
+                    binding.textInputContrasena.setError("");
+                } else {
+                    binding.textInputContrasena.setError("Contraseña incorrecta");
                 }
             }
         });

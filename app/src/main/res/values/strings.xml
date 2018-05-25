@@ -37,6 +37,19 @@
         <item>Sibilancias</item>
         <item>Opresión de pecho</item>
     </array>
+    
+    <array name="posible_causa">
+        <item>Animales con piel</item>
+        <item>Aerosol químico</item>
+        <item>Cambios en la temperatura</item>
+        <item>Ácaros del polvo doméstico</item>
+        <item>Medicamentos</item>
+        <item>Ejercicio</item>
+        <item>Polen</item>
+        <item>Infecciones respiratorias</item>
+        <item>Hubo (leña o tabaco)</item>
+        <item>Expresión emocional fuerte</item>
+    </array>
 
     <!-- Encuestas -->
     <string name="gina_uno">Despertar de noche por asma</string>

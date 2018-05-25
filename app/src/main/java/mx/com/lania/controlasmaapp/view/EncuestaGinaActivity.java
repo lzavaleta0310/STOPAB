@@ -11,15 +11,21 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
 import mx.com.lania.controlasmaapp.R;
+import mx.com.lania.controlasmaapp.model.Gina;
+import mx.com.lania.controlasmaapp.model.Mensaje;
+import mx.com.lania.controlasmaapp.network.rest.CallEncuestaACT;
+import mx.com.lania.controlasmaapp.network.rest.CallEncuestaGina;
 
 public class EncuestaGinaActivity extends AppCompatActivity {
     static final String LOGTAG = "EncuestaGinaActivity";
@@ -28,7 +34,7 @@ public class EncuestaGinaActivity extends AppCompatActivity {
     Switch check_1, check_2, check_3, check_4, check_5;
     TextViewEx pregunta_text001, pregunta_text002, pregunta_text003, pregunta_text004, pregunta_text005;
     LinearLayout linear_progress;
-
+    private CallEncuestaGina call;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,15 +79,36 @@ public class EncuestaGinaActivity extends AppCompatActivity {
                 // Sin validación de día
                 //HttpRequestTask t = new HttpRequestTask();
                 //t.execute();
+
+                Gina gina = new Gina();
+                gina.id_paciente = 1;
+                gina.pregunta_uno = check_1.isChecked();
+                gina.pregunta_dos = check_2.isChecked();
+                gina.pregunta_tres = check_3.isChecked();
+                gina.pregunta_cuatro = check_4.isChecked();
+                gina.pregunta_cinco = check_5.isChecked();
+
+                call = new CallEncuestaGina(EncuestaGinaActivity.this, gina, new CallEncuestaGina.Delegate() {
+                    @Override
+                    public void onSuccess(Mensaje mensaje) {
+                        Toast.makeText(getBaseContext(), mensaje.mensaje, Toast.LENGTH_LONG).show();
+                    }
+                    @Override
+                    public void onFailure(Object t) {
+                        Log.e(LOGTAG, "onFailure :: " + t.toString());
+                    }
+                });
+                call.execute();
             }
         });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-        Intent myIntent = new Intent(getApplicationContext(), DesktopActivity.class);
-        startActivityForResult(myIntent, 0);
+        this.finish();
         return true;
     }
+
+
 
     private int getDiaDelMes(){
         Calendar calendar = Calendar.getInstance();

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.ICFemFragment">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/text_semaforo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Semáforo FEM" />
+
+            <EditText
+                android:id="@+id/text_medida_fem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:inputType="number"
+                android:gravity="center"
+                android:hint="Medida FEM"
+                android:layout_below="@+id/text_semaforo"/>
+
+            <Button
+                android:id="@+id/button_calcular_semaforo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_medida_fem"
+                android:layout_centerHorizontal="true"
+                android:text="Calcular semáforo"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+            <TextView
+                android:id="@+id/text_semaforo_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_calcular_semaforo"
+                android:gravity="center"
+                android:textColor="@color/md_green_900"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>
